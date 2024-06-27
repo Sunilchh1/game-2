@@ -1,0 +1,50 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#user-management">User Management</a></li>
+            <li><a href="#transaction-records">Transaction Records</a></li>
+            <li><a href="#game-records">Game Records</a></li>
+            <li><a href="#account-actions">Account Actions</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="user-management" class="active">
+            <h3>User Management</h3>
+            <form id="create-account-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Create Account</button>
+            </form>
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- User rows will be appended here dynamically -->
+                </tbody>
+            </table>
+        </section>
+       
+        <section id="logout">
+            <button onclick="logout()">Logout</button>
+        </section>
+    </div>
+    <script src="dashboards.js"></script>
+</body>
+</html>
